@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+/*jshint node:true*/
+'use strict';
+
+
+var argv = require('optimist').argv;
+
+if (argv.daemon) {
+  require('daemon')();
+
+  if (process.getgid() === 0) {
+    process.setgid(argv.group || 'nobody');
+    process.setuid(argv.user || 'nobody');
+  }
+}
+
+require('../lib/tasky.js');

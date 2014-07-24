@@ -1,0 +1,21 @@
+{
+  "name": "tasky",
+  "version": "0.0.1",
+  "description": "Small and simple task scheduler",
+  "author": "Nicolas Joyard <joyard.nicolas@gmail.com",
+  "license": "MIT",
+
+  "main": "lib/tasky.js",
+  "dependencies": {
+    "chokidar": "^0.8.2",
+    "daemon": "^1.1.0",
+    "log4js": "^0.6.16",
+    "moment": "^2.7.0",
+    "optimist": "^0.6.1"
+  },
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node lib/tasky.js"
+  }
+}
